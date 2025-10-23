@@ -69,9 +69,11 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <Icon name="Sparkles" size={24} className="text-white" />
-              </div>
+              <img 
+                src="https://cdn.poehali.dev/projects/1fd69274-9e92-469b-9187-6805d471e3cf/files/1e4fb018-ced9-40c9-977c-956d0bc3f4f1.jpg" 
+                alt="RotorRooto Logo" 
+                className="w-10 h-10 object-contain"
+              />
               <span className="text-2xl font-bold text-foreground">RotorRooto</span>
             </div>
             <nav className="hidden md:flex items-center gap-8">
@@ -94,20 +96,29 @@ const Index = () => {
 
       <section className="pt-32 pb-20 bg-gradient-to-br from-primary/5 via-white to-secondary/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Рекламное агентство полного цикла
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Создаём эффективную рекламу с душой. От визитки до комплексного SMM — воплощаем ваши идеи в реальность
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button onClick={() => scrollToSection('services')} size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
-                Наши услуги
-              </Button>
-              <Button onClick={() => scrollToSection('order')} size="lg" variant="outline" className="text-lg px-8 border-2">
-                Связаться с нами
-              </Button>
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+                Рекламное агентство полного цикла
+              </h1>
+              <p className="text-xl text-muted-foreground mb-8">
+                Создаём эффективную рекламу с душой. От визитки до комплексного SMM — воплощаем ваши идеи в реальность
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button onClick={() => scrollToSection('services')} size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
+                  Наши услуги
+                </Button>
+                <Button onClick={() => scrollToSection('order')} size="lg" variant="outline" className="text-lg px-8 border-2">
+                  Связаться с нами
+                </Button>
+              </div>
+            </div>
+            <div className="relative">
+              <img 
+                src="https://cdn.poehali.dev/projects/1fd69274-9e92-469b-9187-6805d471e3cf/files/39745840-60e5-48dc-90b1-144d2386826b.jpg" 
+                alt="Команда RotorRooto" 
+                className="rounded-2xl shadow-2xl w-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -120,14 +131,23 @@ const Index = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">О команде RotorRooto</h2>
               <div className="w-20 h-1 bg-secondary mx-auto"></div>
             </div>
-            <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-8 md:p-12">
-              <p className="text-lg text-foreground/80 leading-relaxed">
-                Мы новая и современная компания будущего. Что нас отличает от других рекламных агентств? Пожалуй, все как у всех. Есть услуги стандартные для компаний и индивидуальные в единичном экземпляре. Гибкая ценовая политика, сроки, доставка, разные бонусы для наших клиентов, но все же, есть кое-что, чем мы выделяемся.
-              </p>
-              <div className="mt-8 p-6 bg-white rounded-xl border-l-4 border-primary">
-                <p className="text-xl font-semibold text-foreground">
-                  Мы всей душой болеем за рекламное дело! В каждый проект мы вкладываем кусочек себя и своей любви. Потому что МЫ ЛЮБИМ СВОЮ РАБОТУ!
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <p className="text-lg text-foreground/80 leading-relaxed mb-6">
+                  Мы новая и современная компания будущего. Что нас отличает от других рекламных агентств? Пожалуй, все как у всех. Есть услуги стандартные для компаний и индивидуальные в единичном экземпляре. Гибкая ценовая политика, сроки, доставка, разные бонусы для наших клиентов, но все же, есть кое-что, чем мы выделяемся.
                 </p>
+                <div className="p-6 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl border-l-4 border-primary">
+                  <p className="text-xl font-semibold text-foreground">
+                    Мы всей душой болеем за рекламное дело! В каждый проект мы вкладываем кусочек себя и своей любви. Потому что МЫ ЛЮБИМ СВОЮ РАБОТУ!
+                  </p>
+                </div>
+              </div>
+              <div>
+                <img 
+                  src="https://cdn.poehali.dev/projects/1fd69274-9e92-469b-9187-6805d471e3cf/files/ba3cbb09-ca31-4e26-b605-ade07123b655.jpg" 
+                  alt="Рекламные материалы" 
+                  className="rounded-2xl shadow-xl w-full object-cover"
+                />
               </div>
             </div>
           </div>
@@ -260,14 +280,14 @@ const Index = () => {
             <div>
               <h3 className="text-xl font-bold mb-4">Социальные сети</h3>
               <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 bg-white/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+                <a href="https://vk.com/rotorrooto" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
                   <Icon name="Facebook" size={20} />
                 </a>
-                <a href="#" className="w-10 h-10 bg-white/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+                <a href="https://instagram.com/rotorrooto" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
                   <Icon name="Instagram" size={20} />
                 </a>
-                <a href="#" className="w-10 h-10 bg-white/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
-                  <Icon name="Twitter" size={20} />
+                <a href="https://t.me/rotorrooto" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors">
+                  <Icon name="Send" size={20} />
                 </a>
               </div>
             </div>
